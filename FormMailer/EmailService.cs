@@ -3,22 +3,16 @@ using System.Net.Mail;
 
 namespace FormMailer;
 
-public class EmailService
+public class EmailService(IConfiguration config)
 {
-  private readonly IConfiguration _config;
-
-  public EmailService(IConfiguration config)
-  {
-    _config = config;
-  }
 
   public async Task SendEmailAsync(ContactForm form)
   {
-    var smtpHost = _config["Smtp:Host"];
-    var smtpPort = int.Parse(_config["Smtp:Port"] ?? "587");
-    var smtpUser = _config["Smtp:Username"];
-    var smtpPass = _config["Smtp:Password"];
-    var toEmail = _config["Smtp:ToEmail"];
+    var smtpHost = config["Smtp:Host"];
+    var smtpPort = int.Parse(config["Smtp:Port"] ?? "587");
+    var smtpUser = config["Smtp:Username"];
+    var smtpPass = config["Smtp:Password"];
+    var toEmail = config["Smtp:ToEmail"];
 
     using var client = new SmtpClient(smtpHost, smtpPort)
     {
