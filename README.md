@@ -16,3 +16,6 @@ Over time, I hope to add features and improve this and my C# skills.
 #### Note!
 **System.Net.Mail** has been rendered obsolete by Microsoft.
 I will be refactoring the Email Service class to use **MailKit** in the future.
+
+This project is working in it's current state but is lacking spam filtering, bot
+detection and html emails. These features will be added in time.
