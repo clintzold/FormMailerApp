@@ -11,3 +11,5 @@ Over time, I hope to add features and improve this and my C# skills.
   - **Language:** C#
   - **Validation Library:** FluentValidation
   - **Email Service:** System.Net.Mail
+  - **Testing Library:** Xunit
+
