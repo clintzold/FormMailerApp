@@ -13,3 +13,6 @@ Over time, I hope to add features and improve this and my C# skills.
   - **Email Service:** System.Net.Mail
   - **Testing Library:** Xunit
 
+#### Note!
+**System.Net.Mail** has been rendered obsolete by Microsoft.
+I will be refactoring the Email Service class to use **MailKit** in the future.
